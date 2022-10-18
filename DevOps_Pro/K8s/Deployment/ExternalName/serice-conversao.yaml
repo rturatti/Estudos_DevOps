@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: lab
+  name: service-conversao
+spec:
+  selector:
+    app: api-conversao
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+  type: LoadBalancer #Usado para expor o serviço externamente em provedores de nuvem

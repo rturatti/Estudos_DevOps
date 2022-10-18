@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: lab
+  name: service-conversao
+spec:
+  type: ExternalName
+  externalName: turatti.dev

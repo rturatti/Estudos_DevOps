@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meuprimeirodeployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: meuprimeirodeployment
+  template:
+    metadata:
+      labels:
+        app: meuprimeirodeployment
+    spec:
+      containers:
+      - name: meucontainer
+        image: kubedevio/nginx-color:blue
+        ports:
+        - containerPort: 80
